@@ -1,0 +1,15 @@
+.laptop(@rules) {
+  @media all and (min-width: @size-laptop) {
+    @rules();
+  }
+}
+
+@laptop: ~"all and (max-width: 1600px)";
+@tablet: ~"all and (max-width: 1024px)";
+@mobile: ~"all and (max-width: 768px)";
+@s-mobile: ~"all and (max-width: 552px)";
+
+@primary-blue: #042CFF;
+@primary-green: #02ca9d;
+@primary-red: #FF0B37;
+

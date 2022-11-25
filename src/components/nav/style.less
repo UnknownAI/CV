@@ -1,0 +1,102 @@
+@import '../../assets/mixins/index.less';
+
+
+.nav{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    font-family: 'Roboto Mono', sans-serif;
+    animation: slideDown 1s ease-out;
+    z-index: 2;
+
+    @media @tablet {
+        top: 0;
+        
+    }
+
+ 
+    
+    &__list{
+        margin: auto;
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid #000;
+        padding: 2px;
+        border-radius: 20px;
+        background-color: #fff;
+
+        @media @tablet {
+            width: 100%;
+            border-radius: 0;
+            border: 0;
+            border-bottom: 1px solid #000;
+            font-size: 20px;
+            padding: 15px 0 15px;
+        }
+
+    }
+    
+    &__item{
+        flex-basis: 33%;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+
+        span:hover::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            border-radius: 20px;
+            z-index: -1;
+            animation: navItemHover 0.3s ease-in-out;
+        }
+
+        &--pink span:hover::after{
+            background-color: rgb(250, 169, 223);   
+        }
+
+        &--blue  span:hover::after{
+            background-color: rgb(116, 176, 255);  
+        }
+
+
+        &--green  span:hover::after{
+            background-color: rgb(18, 211, 0);  
+        }
+        
+       
+      
+    }
+}
+
+@keyframes navItemHover {
+    0%{
+        width: 10%;
+    }
+
+    100%{
+        width: 100%;
+    }
+
+}
+
+@keyframes slideDown{
+    0%{
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    90%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}

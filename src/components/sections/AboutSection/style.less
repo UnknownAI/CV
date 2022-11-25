@@ -1,0 +1,78 @@
+@import '../../../assets/mixins/index.less';
+
+.wrapper{
+    margin-top: 80px;
+    padding: 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+.pharagraph{
+    padding: 90px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    width: 46%;
+
+    &-icon{
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.experience{
+    width: 47%;
+    font-family: 'Roboto Mono', sans-serif;
+   
+
+    &-list{
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .item{
+            width: 70%;
+
+            .years{
+                font-size: 24px;
+            }
+
+            .info{
+                width: 100%;
+                position: absolute;
+                left: 23%;
+
+                span{
+                    display: inline-block;
+                }
+            }
+        }
+
+        
+
+        #study{
+            position: absolute;
+            top: 10%;
+            left: 5%;
+
+            .info{
+                top: 30%;
+            }
+        }
+
+        #work{
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+             .info{
+                top: 50%;
+            }
+        }
+        
+    }
+
+   
+}

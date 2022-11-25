@@ -1,0 +1,23 @@
+@import '../../../assets/mixins/index.scss';
+
+.about{
+    background-color: $primary-purple--light;
+
+    .aboutContentWrapper{
+        padding: 4rem 2rem;
+        height: 100%;
+    }
+
+    .list{
+        width: 50%;
+        margin: auto;
+
+        p {
+            margin-bottom: 10px;
+
+            span{
+                font-size: 40px;
+            }
+        }
+    }
+}

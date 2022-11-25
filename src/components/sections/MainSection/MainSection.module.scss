@@ -1,0 +1,89 @@
+@import '../../../assets/mixins/index.scss';
+
+
+.main{
+    background-color: #1B1B1F;
+    // position: relative;
+
+    .mainWrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .mainContentWrapper{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    .mainTitle{
+        font-size: 1.5rem;
+        font-family: 'Poppins';
+        font-weight: 600;
+        color: #fff;
+        padding-left: 20px;
+
+        @include tablet-md {
+            font-size: 2rem;
+            padding-left: 30px;
+        }
+    }
+
+    .mainIcon{
+        max-width: 150px;
+        margin-bottom: 2rem;
+
+        @include tablet-md {
+            max-width: 210px;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .mainIconWrapper{
+
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+   
+}
+
+.contactButtonRow{
+    display: flex;
+    justify-content: flex-end;
+    .contactButton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+        background: #daff6e;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 20;
+        font-family: 'Roboto Mono';
+        transition: all 1s;
+        cursor: pointer;
+
+        &:hover{
+            transform: rotate(30deg) scale(1.2);
+            -webkit-box-shadow: 4px 4px 32px 0px rgba(255, 255, 255, 0.63);
+            -moz-box-shadow: 4px 4px 32px 0px rgba(255, 255, 255, 0.63);            
+            box-shadow: 4px 4px 32px 0px rgba(255, 255, 255, 0.63);
+        }
+
+        span{
+            transform: rotate(340deg);
+        }
+
+        // @include tablet-md {
+        //     top: 12%;
+        //     right: 15%;
+        // }
+    }
+}
